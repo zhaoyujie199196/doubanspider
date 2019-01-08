@@ -126,11 +126,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DBSManager.cpp" />
+    <ClCompile Include="down\DBSWebData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="model\DBSModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBSManager.h" />
+    <ClInclude Include="down\DBSDownloader.h" />
+    <ClInclude Include="down\DBSWebData.h" />
+    <ClInclude Include="down\IDBSDownloader.h" />
+    <ClInclude Include="down\IDBSWebData.h" />
     <ClInclude Include="model\DBSModel.h" />
     <ClInclude Include="model\IDBSContainer.h" />
     <ClInclude Include="model\IDBSItem.h" />

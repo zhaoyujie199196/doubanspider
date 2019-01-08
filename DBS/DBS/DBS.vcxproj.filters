@@ -48,6 +48,9 @@
     <ClCompile Include="model\DBSModel.cpp">
       <Filter>源文件\model</Filter>
     </ClCompile>
+    <ClCompile Include="down\DBSWebData.cpp">
+      <Filter>源文件\down</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBSManager.h">
@@ -64,6 +67,18 @@
     </ClInclude>
     <ClInclude Include="model\IDBSItem.h">
       <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="down\DBSDownloader.h">
+      <Filter>头文件\down</Filter>
+    </ClInclude>
+    <ClInclude Include="down\IDBSDownloader.h">
+      <Filter>头文件\down</Filter>
+    </ClInclude>
+    <ClInclude Include="down\IDBSWebData.h">
+      <Filter>头文件\down</Filter>
+    </ClInclude>
+    <ClInclude Include="down\DBSWebData.h">
+      <Filter>头文件\down</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
