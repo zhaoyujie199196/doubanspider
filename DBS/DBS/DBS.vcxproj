@@ -125,7 +125,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DBSManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="model\DBSModel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBSManager.h" />
+    <ClInclude Include="model\DBSModel.h" />
+    <ClInclude Include="model\IDBSContainer.h" />
+    <ClInclude Include="model\IDBSItem.h" />
+    <ClInclude Include="model\IDBSModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

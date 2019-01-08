@@ -1,3 +1,4 @@
+DBS/.vs/*
 DBS/bin/*
 !DBS/bin/libs_32
 

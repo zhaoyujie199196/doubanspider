@@ -13,10 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\model">
+      <UniqueIdentifier>{301b5a89-4ccb-4c33-a7bc-925720c2007b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\down">
+      <UniqueIdentifier>{e9be0156-248d-4804-a083-c95e5c7d08fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\parse">
+      <UniqueIdentifier>{14c72875-685b-4da8-858d-8986aa819fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\config">
+      <UniqueIdentifier>{808f53a2-190b-4e68-8e7c-a43386c1611a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\model">
+      <UniqueIdentifier>{e0519c70-e91d-4f87-930f-7674a565ac3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\down">
+      <UniqueIdentifier>{f706c117-bcc3-478e-95d2-5a54b10e8dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\config">
+      <UniqueIdentifier>{bef17588-2d62-4148-92df-50c776e9fa38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\parse">
+      <UniqueIdentifier>{fe8bdb58-cd1b-4c7c-be7b-a2275d7cf861}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DBSManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DBSModel.cpp">
+      <Filter>源文件\model</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBSManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="model\IDBSModel.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DBSModel.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\IDBSContainer.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\IDBSItem.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
