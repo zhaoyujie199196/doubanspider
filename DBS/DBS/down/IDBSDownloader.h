@@ -5,7 +5,7 @@ class IDBSDownloader
 {
 public:
 	enum EnDownCode {
-		NO_ERROR,
+		NO_ERROR
 	};
 
 	IDBSDownloader() {}
