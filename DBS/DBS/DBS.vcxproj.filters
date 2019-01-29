@@ -49,6 +49,18 @@
     <Filter Include="头文件\mainframe">
       <UniqueIdentifier>{c5ca1ec3-4b93-4791-b11b-e8aa80cd3dfd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\spider">
+      <UniqueIdentifier>{91e5332f-8f47-47bc-ad78-d618bfdeda68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\soider">
+      <UniqueIdentifier>{bbc114a7-7fd1-45ea-bcf5-0373250ed8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\task">
+      <UniqueIdentifier>{910abea5-ce7a-40f4-b058-7cb0c2a16230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\task">
+      <UniqueIdentifier>{77c9410e-4052-4fa9-88a1-66d1f27438b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,11 +84,11 @@
     <ClCompile Include="mainframe\DBSTask.cpp">
       <Filter>源文件\mainframe</Filter>
     </ClCompile>
-    <ClCompile Include="mainframe\DBSQueue.cpp">
-      <Filter>源文件\mainframe</Filter>
-    </ClCompile>
     <ClCompile Include="mainframe\DBSThreadPool.cpp">
       <Filter>头文件\mainframe</Filter>
+    </ClCompile>
+    <ClCompile Include="mainframe\DBSTaskQueue.cpp">
+      <Filter>源文件\mainframe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,13 +140,22 @@
     <ClInclude Include="mainframe\DBSTask.h">
       <Filter>头文件\mainframe</Filter>
     </ClInclude>
-    <ClInclude Include="mainframe\DBSQueue.h">
-      <Filter>头文件\mainframe</Filter>
-    </ClInclude>
     <ClInclude Include="mainframe\IDBSTask.h">
       <Filter>头文件\mainframe</Filter>
     </ClInclude>
     <ClInclude Include="mainframe\DBSThreadPool.h">
+      <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="mainframe\IDBSTaskData.h">
+      <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="spider\DBSSpiderTask.h">
+      <Filter>头文件\spider</Filter>
+    </ClInclude>
+    <ClInclude Include="task\DBSSpiderTask.h">
+      <Filter>头文件\task</Filter>
+    </ClInclude>
+    <ClInclude Include="mainframe\DBSTaskQueue.h">
       <Filter>头文件\mainframe</Filter>
     </ClInclude>
   </ItemGroup>

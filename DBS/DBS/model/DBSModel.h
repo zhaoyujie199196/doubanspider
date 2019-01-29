@@ -9,6 +9,7 @@ class DBSModel : public IDBSModel
 public:
 	DBSModel();
 	~DBSModel();
+	void init();
 	
 protected:
 	std::shared_ptr<IDBSContainer> m_pVisitedContainer;   //已经爬过的数据容器

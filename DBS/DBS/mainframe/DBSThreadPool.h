@@ -7,19 +7,21 @@
 #include <memory>
 
 class IDBSTask;
-class DBSQueue;
+class DBSTaskQueue;
 class DBSThreadPool
 {
 public:
 	DBSThreadPool();
 	~DBSThreadPool();
-	void init();
+	void init(int nThreadCount, int nMaxTaskCount);
 	void appendTask(std::shared_ptr<IDBSTask> pTask);
+	void stop();
 
 protected:
 	void execute();
 
 protected:
-	std::shared_ptr<DBSQueue> m_pTaskQueue;
-	std::vector<std::thread *> m_threadVec;
+	volatile bool m_bQuit = false;
+	std::shared_ptr<DBSTaskQueue> m_pTaskQueue;
+	std::vector<std::shared_ptr<std::thread>> m_threadVec;
 };

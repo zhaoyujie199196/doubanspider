@@ -1,5 +1,8 @@
 #pragma once
 
+#include <memory>
+
+class IDBSTaskData;
 class IDBSTask
 {
 public:

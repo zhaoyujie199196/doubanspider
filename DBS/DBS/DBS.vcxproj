@@ -86,6 +86,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DBS\</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -94,6 +95,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DBS\</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,6 +106,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DBS\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -118,6 +121,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DBS\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -129,7 +133,7 @@
     <ClCompile Include="DBSManager.cpp" />
     <ClCompile Include="down\DBSWebData.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mainframe\DBSQueue.cpp" />
+    <ClCompile Include="mainframe\DBSTaskQueue.cpp" />
     <ClCompile Include="mainframe\DBSTask.cpp" />
     <ClCompile Include="mainframe\DBSThreadPool.cpp" />
     <ClCompile Include="model\DBSModel.cpp" />
@@ -144,16 +148,19 @@
     <ClInclude Include="down\DBSWebData.h" />
     <ClInclude Include="down\IDBSDownloader.h" />
     <ClInclude Include="down\IDBSWebData.h" />
-    <ClInclude Include="mainframe\DBSQueue.h" />
+    <ClInclude Include="mainframe\DBSTaskQueue.h" />
     <ClInclude Include="mainframe\DBSTask.h" />
     <ClInclude Include="mainframe\DBSThreadPool.h" />
     <ClInclude Include="mainframe\IDBSTask.h" />
+    <ClInclude Include="mainframe\IDBSTaskData.h" />
     <ClInclude Include="model\DBSModel.h" />
     <ClInclude Include="model\IDBSContainer.h" />
     <ClInclude Include="model\IDBSItem.h" />
     <ClInclude Include="model\IDBSModel.h" />
     <ClInclude Include="parse\IDBSParseData.h" />
     <ClInclude Include="parse\IDBSParser.h" />
+    <ClInclude Include="spider\DBSSpiderTask.h" />
+    <ClInclude Include="task\DBSSpiderTask.h" />
     <ClInclude Include="utils\DBSSingleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

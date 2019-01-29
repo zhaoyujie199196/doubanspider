@@ -9,3 +9,8 @@ DBSModel::~DBSModel()
 {
 
 }
+
+void DBSModel::init()
+{
+
+}
