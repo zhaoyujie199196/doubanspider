@@ -1,6 +1,7 @@
 #include "DBSThreadPool.h"
 #include "IDBSTask.h"
 #include "DBSTaskQueue.h"
+#include "DBSResultDealer.h"
 
 DBSThreadPool::DBSThreadPool()
 {
@@ -17,8 +18,9 @@ DBSThreadPool::~DBSThreadPool()
 	m_threadVec.clear();
 }
 
-void DBSThreadPool::init(int nThreadCount, int nMaxTaskCount)
+void DBSThreadPool::init(int nThreadCount, int nMaxTaskCount, std::shared_ptr<IDBSResultDealer> pDealer)
 {
+	m_pResultDealer = pDealer;
 	m_pTaskQueue = std::shared_ptr<DBSTaskQueue>(new DBSTaskQueue(nMaxTaskCount));
 	for (int i = 0; i < nThreadCount; ++i)
 	{
@@ -29,7 +31,7 @@ void DBSThreadPool::init(int nThreadCount, int nMaxTaskCount)
 
 void DBSThreadPool::appendTask(std::shared_ptr<IDBSTask> pTask)
 {
-	m_pTaskQueue->appendTask(pTask);
+	m_pTaskQueue->appendOne(pTask);
 }
 
 void DBSThreadPool::stop()
@@ -44,9 +46,11 @@ void DBSThreadPool::execute()
 	{
 		if (m_bQuit)
 			break;
-		std::shared_ptr<IDBSTask> pTask = m_pTaskQueue->takeTask();
+		std::shared_ptr<IDBSTask> pTask = m_pTaskQueue->takeOne();
 		if (!pTask)
 			break;
-		pTask->run();
+		std::shared_ptr<IDBSResult> pResult = pTask->run();
+		if (m_pResultDealer)
+		    m_pResultDealer->deal(pTask->getTaskKey(), pResult);
 	}
 }

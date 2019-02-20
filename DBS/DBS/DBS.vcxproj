@@ -133,26 +133,32 @@
     <ClCompile Include="DBSManager.cpp" />
     <ClCompile Include="down\DBSWebData.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mainframe\DBSTaskQueue.cpp" />
+    <ClCompile Include="mainframe\DBSResultDealer.cpp" />
     <ClCompile Include="mainframe\DBSTask.cpp" />
     <ClCompile Include="mainframe\DBSThreadPool.cpp" />
     <ClCompile Include="model\DBSModel.cpp" />
+    <ClCompile Include="task\DBSSpiderTask.cpp" />
+    <ClCompile Include="utils\DBSLogTool.cpp" />
     <ClCompile Include="utils\DBSSingleton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config\DBSConfig.h" />
     <ClInclude Include="config\DBSOriUrls.h" />
     <ClInclude Include="config\IDBSOriUrls.h" />
+    <ClInclude Include="core\DBSQueue.h" />
+    <ClInclude Include="DBSDefines.h" />
     <ClInclude Include="DBSManager.h" />
     <ClInclude Include="down\DBSDownloader.h" />
     <ClInclude Include="down\DBSWebData.h" />
     <ClInclude Include="down\IDBSDownloader.h" />
     <ClInclude Include="down\IDBSWebData.h" />
+    <ClInclude Include="mainframe\DBSResultDealer.h" />
+    <ClInclude Include="mainframe\IDBSResult.h" />
     <ClInclude Include="mainframe\DBSTaskQueue.h" />
     <ClInclude Include="mainframe\DBSTask.h" />
     <ClInclude Include="mainframe\DBSThreadPool.h" />
+    <ClInclude Include="mainframe\IDBSResultDealer.h" />
     <ClInclude Include="mainframe\IDBSTask.h" />
-    <ClInclude Include="mainframe\IDBSTaskData.h" />
     <ClInclude Include="model\DBSModel.h" />
     <ClInclude Include="model\IDBSContainer.h" />
     <ClInclude Include="model\IDBSItem.h" />
@@ -161,6 +167,8 @@
     <ClInclude Include="parse\IDBSParser.h" />
     <ClInclude Include="spider\DBSSpiderTask.h" />
     <ClInclude Include="task\DBSSpiderTask.h" />
+    <ClInclude Include="task\DBSTaskData.h" />
+    <ClInclude Include="utils\DBSLogTool.h" />
     <ClInclude Include="utils\DBSSingleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

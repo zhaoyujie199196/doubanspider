@@ -1,7 +1,9 @@
 #include "DBSTask.h"
-#include "IDBSTaskData.h"
+#include "IDBSTask.h"
+#include "IDBSResult.h"
 
-DBSTask::DBSTask()
+DBSTask::DBSTask(int nTaskKey)
+	: m_nTaskKey(nTaskKey)
 {
 
 }
@@ -11,7 +13,13 @@ DBSTask::~DBSTask()
 
 }
 
-void DBSTask::run()
+std::shared_ptr<IDBSResult> DBSTask::run()
 {
-	
+	return nullptr;
 }
+
+int DBSTask::getTaskKey()
+{
+	return m_nTaskKey;
+}
+
