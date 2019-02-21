@@ -1,11 +1,13 @@
 #pragma once
 
+#include <string>
+
 //обтьфВ╫с©з
 class IDBSDownloader
 {
 public:
 	enum EnDownCode {
-		NO_ERROR
+		DOWN_NO_ERROR
 	};
 
 	IDBSDownloader() {}

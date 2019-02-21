@@ -2,11 +2,15 @@
 
 #include <memory>
 
-class IDBSTaskData;
+class IDBSResult;
 class IDBSTask
 {
 public:
 	IDBSTask() {}
 	virtual ~IDBSTask() {}
-	virtual void run() = 0;
+	virtual std::shared_ptr<IDBSResult> run() = 0;
+	virtual int getTaskKey() = 0;
+
+protected:
+	
 };

@@ -61,6 +61,12 @@
     <Filter Include="源文件\task">
       <UniqueIdentifier>{77c9410e-4052-4fa9-88a1-66d1f27438b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\core">
+      <UniqueIdentifier>{a3081ca7-2967-4574-bef0-24ba621bd31c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core">
+      <UniqueIdentifier>{c3cb6512-3553-40be-97d9-aef4d40e08bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,11 +90,20 @@
     <ClCompile Include="mainframe\DBSTask.cpp">
       <Filter>源文件\mainframe</Filter>
     </ClCompile>
-    <ClCompile Include="mainframe\DBSThreadPool.cpp">
-      <Filter>头文件\mainframe</Filter>
+    <ClCompile Include="utils\DBSLogTool.cpp">
+      <Filter>源文件\utils</Filter>
     </ClCompile>
-    <ClCompile Include="mainframe\DBSTaskQueue.cpp">
+    <ClCompile Include="mainframe\DBSResultDealer.cpp">
       <Filter>源文件\mainframe</Filter>
+    </ClCompile>
+    <ClCompile Include="mainframe\DBSThreadPool.cpp">
+      <Filter>源文件\mainframe</Filter>
+    </ClCompile>
+    <ClCompile Include="task\DBSSpiderTask.cpp">
+      <Filter>源文件\task</Filter>
+    </ClCompile>
+    <ClCompile Include="down\DBSDownloader.cpp">
+      <Filter>源文件\down</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,17 +161,35 @@
     <ClInclude Include="mainframe\DBSThreadPool.h">
       <Filter>头文件\mainframe</Filter>
     </ClInclude>
-    <ClInclude Include="mainframe\IDBSTaskData.h">
-      <Filter>头文件\mainframe</Filter>
-    </ClInclude>
     <ClInclude Include="spider\DBSSpiderTask.h">
       <Filter>头文件\spider</Filter>
     </ClInclude>
     <ClInclude Include="task\DBSSpiderTask.h">
       <Filter>头文件\task</Filter>
     </ClInclude>
+    <ClInclude Include="utils\DBSLogTool.h">
+      <Filter>头文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="core\DBSQueue.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
     <ClInclude Include="mainframe\DBSTaskQueue.h">
       <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="mainframe\IDBSResult.h">
+      <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="mainframe\IDBSResultDealer.h">
+      <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="mainframe\DBSResultDealer.h">
+      <Filter>头文件\mainframe</Filter>
+    </ClInclude>
+    <ClInclude Include="task\DBSTaskData.h">
+      <Filter>头文件\task</Filter>
+    </ClInclude>
+    <ClInclude Include="DBSDefines.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

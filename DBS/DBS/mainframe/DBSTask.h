@@ -2,11 +2,15 @@
 
 #include "IDBSTask.h"
 
-class IDBSTaskData;
+class IDBSResult;
 class DBSTask : public IDBSTask
 {
 public:
-	DBSTask();
+	DBSTask(int nTaskKey);
 	~DBSTask();
-	void run();
+	std::shared_ptr<IDBSResult> run();
+	int getTaskKey();
+
+protected:
+	int m_nTaskKey = 0;
 };
